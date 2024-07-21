@@ -17,6 +17,7 @@ class LoginViewBody extends StatelessWidget {
           padding:  EdgeInsets.only(top: SizeConfig.viewHeight! * 0.25),
           child: Column(
             children: [
+              // test
               SvgPicture.asset(AppAssets.LOGO_PATH),
               const SizedBox(height: 12,),
               const LoginInfoSection(),
