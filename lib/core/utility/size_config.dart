@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/cupertino.dart';
-
+// CLASS PROVIDE YOU WITH SCREEN WIDTH AND SCREEN HEIGHT'
 class SizeConfig {
 
   static double? viewWidth;

@@ -1,4 +1,6 @@
 abstract class AppStrings {
+
+  // ALL SOLID STRING WILL BE SAVED HERE
   static String APP_NAME_TEXT = 'Spend Smart';
   static String SPLASH_VIEW_SUB_TITLE_TEXT = 'Your expense manager';
   static String LOGIN_TITLE_TEXT = 'Create an account';

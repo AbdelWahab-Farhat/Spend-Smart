@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:spend_smart/constants.dart';
 
+// ALL APP STYLE WILL BE SAVE HERE
 abstract class AppStyle {
   static const body2 = TextStyle(
     fontSize: 14,

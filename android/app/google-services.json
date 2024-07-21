@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "154343243689",
+    "project_id": "spend-smart-4b5d4",
+    "storage_bucket": "spend-smart-4b5d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:154343243689:android:12afea928772ed6f278eb8",
+        "android_client_info": {
+          "package_name": "com.example.spend_smart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "154343243689-tlumruqvl61361pm2lv4nsanrr7lesbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBKYryTAX6xWqcW9_9iyBIDE035y2bL9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "154343243689-tlumruqvl61361pm2lv4nsanrr7lesbo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "154343243689-i9ua3lmqpdeul1c25eh77kdjuotg6h58.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.spendSmart"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
