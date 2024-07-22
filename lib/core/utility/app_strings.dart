@@ -15,5 +15,9 @@ abstract class AppStrings {
   static const String HOME_TODAY_TEXT = 'Today';
   static const String  HOME_YESTERDAY_TEXT = 'Yesterday';
   static const String HOME_BUTTON_TEXT = 'Add new';
+  static const String ROOT_FIRST_ITEM_TEXT = 'Report';
+  static const String ROOT_SECOND_ITEM_TEXT = 'Home';
+  static const String ROOT_THIRD_ITEM_TEXT = 'Setting';
+
 
 }

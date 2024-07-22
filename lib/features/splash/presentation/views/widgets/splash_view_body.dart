@@ -29,7 +29,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         FirebaseAuth.instance.authStateChanges().listen(
           (event) {
             if (event == null) {
-               GoRouter.of(context).pushReplacement(AppRouter.HOME_VIEW_PATH);
+               GoRouter.of(context).pushReplacement(AppRouter.ROOT_PATH);
             }
             else {
               GoRouter.of(context).pushReplacement(AppRouter.LOGIN_VIEW_PATH);
