@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
@@ -18,13 +19,24 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
-    goToLogin2sec();
+    changeViewDepandsOnAuthState();
   }
 
-  void goToLogin2sec() {
+  void changeViewDepandsOnAuthState() {
     Future.delayed(
       const Duration(milliseconds: 2000),
-      () => GoRouter.of(context).pushReplacement(AppRouter.LOGIN_VIEW_PATH),
+      () {
+        FirebaseAuth.instance.authStateChanges().listen(
+          (event) {
+            if (event == null) {
+               GoRouter.of(context).pushReplacement(AppRouter.HOME_VIEW_PATH);
+            }
+            else {
+              GoRouter.of(context).pushReplacement(AppRouter.LOGIN_VIEW_PATH);
+            }
+          },
+        );
+      },
     );
   }
 
