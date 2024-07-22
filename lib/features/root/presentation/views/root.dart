@@ -5,6 +5,7 @@ import 'package:spend_smart/core/utility/app_assets.dart';
 import 'package:spend_smart/core/utility/app_strings.dart';
 import 'package:spend_smart/features/home/presentation/views/home_view.dart';
 import 'package:spend_smart/features/report/presentation/view/report_view.dart';
+import 'package:spend_smart/features/setting/presentation/views/setting_view.dart';
 
 class Root extends StatefulWidget {
    const Root({super.key});
@@ -14,12 +15,12 @@ class Root extends StatefulWidget {
 }
 
 class _RootState extends State<Root> {
-  final NotchBottomBarController notchBottomBarController = NotchBottomBarController();
+  final NotchBottomBarController notchBottomBarController = NotchBottomBarController(index: 1);
 
   List<Widget> views = [
     const ReportView(),
     const HomeView(),
-    const SizedBox(),
+    const SettingView(),
   ];
 
   int currentIndex = 1;

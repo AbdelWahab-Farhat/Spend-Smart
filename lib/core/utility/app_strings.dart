@@ -31,5 +31,12 @@ abstract class AppStrings {
   static const String REPORT_DETAILS_TEXT = 'DETAILS';
   static const String REPORT_TRANSACTIONS_TEXT = 'transactions';
 
+  // SETTING VIEW STRINGS
+  static const String SETTING_CATEGORY_TEXT = 'Manage categories';
+  static const String SETTING_PDF_TEXT = 'Export to PDF';
+  static const String SETTING_LANGUAGE_TEXT = 'Choose language';
+  static const String SETTING_QUESTIONS_TEXT= 'Frequently Asked Questions';
+  static const String SETTING_LOGOUT_TEXT = 'Logout';
+  static const String SETTING_CURRENCY_TEXT = 'Choose currency';
 
 }

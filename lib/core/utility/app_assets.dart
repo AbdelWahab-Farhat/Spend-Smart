@@ -23,5 +23,10 @@ abstract class AppAssets {
   static const SETTING_ICON_PATH = 'lib/assets/icons/setting-icon.svg';
   static const SETTING_BLACK_ICON_PATH = 'lib/assets/icons/setting-black.svg';
   static const MORE_ICON_PATH = 'lib/assets/icons/more-icon.svg';
-
+  static const PDF_ICON_PATH = 'lib/assets/icons/pdf-icon.svg';
+  static const LANGUAGE_ICON_PATH = 'lib/assets/icons/language-icon.svg';
+  static const LOGOUT_ICON_PATH = 'lib/assets/icons/logout-icon.svg';
+  static const MANGE_CATEGORY_ICON_PATH = 'lib/assets/icons/mange-category-icon.svg';
+  static const CURRENCY_ICON_PATH = 'lib/assets/icons/currency-icon.svg';
+  static const ASKED_QUSTIONS_ICON_PATH = 'lib/assets/icons/asked-qustions-icon.svg';
 }

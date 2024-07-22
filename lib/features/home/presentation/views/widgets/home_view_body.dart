@@ -1,10 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:spend_smart/constants.dart';
-import 'package:spend_smart/core/utility/app_assets.dart';
 import 'package:spend_smart/core/utility/app_strings.dart';
-import 'package:spend_smart/core/utility/app_style.dart';
 import 'package:spend_smart/core/widgets/custom_date_picker.dart';
 import 'package:spend_smart/core/widgets/custom_floating_button.dart';
 import 'package:spend_smart/features/home/presentation/views/widgets/list_view_expenses_section.dart';

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:spend_smart/core/widgets/custom_category_widget.dart';
 
 import '../../../../../constants.dart';

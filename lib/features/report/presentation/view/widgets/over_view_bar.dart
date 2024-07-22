@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spend_smart/constants.dart';
-import 'package:spend_smart/core/utility/app_style.dart';
 
 
 
