@@ -49,6 +49,8 @@ class MyApp extends StatelessWidget {
       create: (context) => LoginCubit(LoginRepoImpl()),
       child: MaterialApp.router(
         theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white,
+            appBarTheme: const AppBarTheme(color: Colors.white),
             fontFamily: GoogleFonts
                 .inter()
                 .fontFamily

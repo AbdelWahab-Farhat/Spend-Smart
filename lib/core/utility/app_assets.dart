@@ -22,4 +22,6 @@ abstract class AppAssets {
   static const REPORT_BLACK_ICON_PATH = 'lib/assets/icons/report-black-icon.svg';
   static const SETTING_ICON_PATH = 'lib/assets/icons/setting-icon.svg';
   static const SETTING_BLACK_ICON_PATH = 'lib/assets/icons/setting-black.svg';
+  static const MORE_ICON_PATH = 'lib/assets/icons/more-icon.svg';
+
 }

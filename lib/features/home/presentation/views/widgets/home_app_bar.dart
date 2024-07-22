@@ -28,7 +28,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget{
       ),
       title: Text(
         'Spend Smart',
-        style: AppStyle.headLine6.copyWith(fontWeight: FontWeight.bold),
+        style: AppStyle.headLine6.copyWith(fontSize: 24,fontWeight: FontWeight.bold),
       ),
       actions: const [AppBarActions()],
     );

@@ -4,9 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:spend_smart/core/utility/app_assets.dart';
 import 'package:spend_smart/core/utility/app_strings.dart';
 import 'package:spend_smart/features/home/presentation/views/home_view.dart';
+import 'package:spend_smart/features/report/presentation/view/report_view.dart';
 
 class Root extends StatefulWidget {
-   Root({super.key});
+   const Root({super.key});
 
   @override
   State<Root> createState() => _RootState();
@@ -16,7 +17,7 @@ class _RootState extends State<Root> {
   final NotchBottomBarController notchBottomBarController = NotchBottomBarController();
 
   List<Widget> views = [
-    const SizedBox(),
+    const ReportView(),
     const HomeView(),
     const SizedBox(),
   ];
@@ -29,7 +30,7 @@ class _RootState extends State<Root> {
       bottomNavigationBar: AnimatedNotchBottomBar(
           removeMargins: true,
           showShadow: true,
-          bottomBarHeight: 100,
+          bottomBarHeight: 20,
           notchBottomBarController: notchBottomBarController,
           bottomBarItems: [
             BottomBarItem(inActiveItem:SvgPicture.asset(AppAssets.REPORT_BLACK_ICON_PATH)

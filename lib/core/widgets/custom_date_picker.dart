@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../constants.dart';
-import '../../../../../core/utility/app_style.dart';
+import '../../constants.dart';
+import '../utility/app_style.dart';
 
-
-class DateSection extends StatelessWidget {
-  const DateSection({super.key});
+class CustomDatePicker extends StatelessWidget {
+  const CustomDatePicker({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +31,5 @@ class DateSection extends StatelessWidget {
       const Spacer(),
       IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_forward_ios,size: 28,),),
     ],);
-
   }
 }

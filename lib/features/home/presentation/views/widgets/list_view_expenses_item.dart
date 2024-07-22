@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:spend_smart/core/widgets/custom_category_widget.dart';
 
 import '../../../../../constants.dart';
 import '../../../../../core/utility/app_assets.dart';
@@ -16,10 +17,7 @@ class ListViewExpensesItem extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        CircleAvatar(
-          backgroundColor: Colors.green.withOpacity(0.3),
-          child: SvgPicture.asset(AppAssets.GROCERY_ICON_PATH),
-        ),
+        CustomCategoryWidget(iconSvgPath: AppAssets.GIFTS_ICON_PATH, iconBackgroundColor: Colors.pink.withOpacity(0.3)),
         const SizedBox(width: 9,),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
