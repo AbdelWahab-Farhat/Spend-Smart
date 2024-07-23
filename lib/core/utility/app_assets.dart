@@ -30,4 +30,58 @@ abstract class AppAssets {
   static const CURRENCY_ICON_PATH = 'lib/assets/icons/currency-icon.svg';
   static const ASKED_QUSTIONS_ICON_PATH = 'lib/assets/icons/asked-qustions-icon.svg';
   static const DROP_DOWN_ARROW_ICON_PATH = 'lib/assets/icons/arrow-drop-down-icon.svg';
+  static const MARKED_ICON_PATH = 'lib/assets/icons/marked-icon.svg';
+  static const  BALL_ICON_PATH = 'lib/assets/icons/ball-icon.svg';
+  static const  CHIRTY_ICON_PATH = 'lib/assets/icons/chirty-icon.svg';
+  static const  COFFEE_ICON_PATH = 'lib/assets/icons/coffee-icon.svg';
+  static const  HAT_ICON_PATH = 'lib/assets/icons/hat-icon.svg';
+  static const  GAS_ICON_PATH = 'lib/assets/icons/gas-icon.svg';
+  static const  YOGA_ICON_PATH = 'lib/assets/icons/yoga-icon.svg';
+  static const  SAVINGS_ICON_PATH = 'lib/assets/icons/savings-icon.svg';
+  static const  PARTY_ICON_PATH = 'lib/assets/icons/party-icon.svg';
+
+  static List<String> getAllIcons() {
+    return [
+      LOGO_PATH,
+      GOOGLE_ICON_PATH,
+      SEARCH_ICON_PATH,
+      CASH_ICON_PATH,
+      BALANCE_ICON_PATH,
+      INCOME_ICON_PATH,
+      CAFE_ICON_PATH,
+      COMMUTE_ICON_PATH,
+      GROCERY_ICON_PATH,
+      HEALTH_ICON_PATH,
+      LAUNDRY_ICON_PATH,
+      RESTAURANT_ICON_PATH,
+      LIQUOR_ICON_PATH,
+      GIFTS_ICON_PATH,
+      ELECTRONICS_ICON_PATH,
+      HOME_BLACK_ICON_PATH,
+      HOME_ICON_PATH,
+      REPORT_ICON_PATH,
+      REPORT_BLACK_ICON_PATH,
+      SETTING_ICON_PATH,
+      SETTING_BLACK_ICON_PATH,
+      MORE_ICON_PATH,
+      PDF_ICON_PATH,
+      LANGUAGE_ICON_PATH,
+      LOGOUT_ICON_PATH,
+      MANGE_CATEGORY_ICON_PATH,
+      CURRENCY_ICON_PATH,
+      ASKED_QUSTIONS_ICON_PATH,
+      DROP_DOWN_ARROW_ICON_PATH,
+      MARKED_ICON_PATH,
+      BALL_ICON_PATH,
+      CHIRTY_ICON_PATH,
+      COFFEE_ICON_PATH,
+      HAT_ICON_PATH,
+      GAS_ICON_PATH,
+      YOGA_ICON_PATH,
+      SAVINGS_ICON_PATH,
+      PARTY_ICON_PATH,
+    ];
+  }
 }
+
+

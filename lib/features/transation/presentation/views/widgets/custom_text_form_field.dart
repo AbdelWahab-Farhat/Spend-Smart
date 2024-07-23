@@ -13,7 +13,9 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      validator: (value) {},
+      validator: (value) {
+        return null;
+      },
       style: AppStyle.body2.copyWith(fontSize: 15, color: kAccentColor),
       keyboardType: isAmount
           ? const TextInputType.numberWithOptions(decimal: true)

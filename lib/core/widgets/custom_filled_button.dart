@@ -14,7 +14,7 @@ class CustomFilledButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 8,vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 8,vertical: 12),
         width: width ?? 250,
         height: height  ?? 55,
         decoration: BoxDecoration(

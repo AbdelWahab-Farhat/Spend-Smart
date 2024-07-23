@@ -28,8 +28,8 @@ class TransactionViewBody extends StatelessWidget {
               const CustomTextFormField(label: 'Amount', isAmount: true),
               const SizedBox(height: 20,),
               const CustomTextFormField(label: 'Description', isAmount: false),
-              const SizedBox(height: 20,),
-              CustomFilledButton(titleText: 'Add an Transaction', onTap: (){},width: SizeConfig.viewWidth,)
+              SizedBox(height: SizeConfig.viewHeight!* .40,),
+              CustomFilledButton(titleText: 'Add an Transaction', onTap: (){},width: SizeConfig.viewWidth,),
             ],
           ),
         ),

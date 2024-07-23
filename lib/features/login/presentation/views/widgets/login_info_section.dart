@@ -11,12 +11,12 @@ class LoginInfoSection extends StatelessWidget {
     return Column(
       children: [
         Text(AppStrings.APP_NAME_TEXT,style: AppStyle.headLine6.copyWith(fontSize: 24,fontWeight: FontWeight.bold),),
-        Padding(
-          padding: const EdgeInsets.only(top: 40,bottom: 8),
+        const Padding(
+          padding: EdgeInsets.only(top: 40,bottom: 8),
           child: Text(AppStrings.LOGIN_TITLE_TEXT,style: AppStyle.headLine6,),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24),
           child: Text(AppStrings.LOGIN_SUB_TITLE_TEXT,style: AppStyle.body2,textAlign: TextAlign.center),
         )
       ],

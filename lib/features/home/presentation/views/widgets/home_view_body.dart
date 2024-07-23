@@ -4,7 +4,7 @@ import 'package:spend_smart/core/utility/app_router.dart';
 import 'package:spend_smart/core/utility/app_strings.dart';
 import 'package:spend_smart/core/widgets/custom_date_picker.dart';
 import 'package:spend_smart/core/widgets/custom_floating_button.dart';
-import 'package:spend_smart/features/home/presentation/views/widgets/list_view_expenses_section.dart';
+import 'package:spend_smart/features/home/presentation/views/widgets/list_view_expenses.dart';
 import 'expenses_state_section.dart';
 import 'home_app_bar.dart';
 
@@ -36,15 +36,11 @@ class HomeViewBody extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
-                ListViewExpensesSection(
-                  dayName: AppStrings.HOME_TODAY_TEXT,
-                ),
+                ListViewExpenses(dayName: AppStrings.HOME_TODAY_TEXT),
                 SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
-                ListViewExpensesSection(
-                  dayName: AppStrings.HOME_YESTERDAY_TEXT,
-                ),
+                ListViewExpenses(dayName: AppStrings.HOME_YESTERDAY_TEXT),
               ],
             ),
           ),

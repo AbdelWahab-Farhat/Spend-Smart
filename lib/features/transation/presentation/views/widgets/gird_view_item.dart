@@ -5,6 +5,7 @@ import '../../../../../core/utility/app_style.dart';
 import '../../../../../core/widgets/custom_category_widget.dart';
 
 class GirdViewItem extends StatelessWidget {
+
   const GirdViewItem({super.key});
 
   @override

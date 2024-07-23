@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:spend_smart/core/widgets/custom_category_widget.dart';
 
-import '../../../../../constants.dart';
-import '../../../../../core/utility/app_assets.dart';
-import '../../../../../core/utility/app_strings.dart';
-import '../../../../../core/utility/app_style.dart';
+import '../../constants.dart';
+import '../utility/app_assets.dart';
+import '../utility/app_strings.dart';
+import '../utility/app_style.dart';
+import 'custom_category_widget.dart';
 
-class ListViewExpensesItem extends StatelessWidget {
-  const ListViewExpensesItem({
-    super.key,
-  });
+class CustomExpenseItemWidget extends StatelessWidget {
+  const CustomExpenseItemWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -11,6 +11,7 @@ class ReportAppBar extends StatelessWidget implements PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: Colors.white,
       title: Text(
         'Statistics',
         style: AppStyle.headLine6

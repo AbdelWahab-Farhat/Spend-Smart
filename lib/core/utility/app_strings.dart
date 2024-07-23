@@ -43,5 +43,6 @@ abstract class AppStrings {
   static const String TRANSACTION_CHOOSE_CATEGORY_TEXT = 'CHOOSE CATEGORY';
   static const String TRANSACTION_NEW_CATEGORY_TEXT = 'Add New Category';
 
-
+// SEARCH VIEW STRINGS
+  static const String SEARCH_HINT_TEXT = 'Search for notes, categories or labels';
 }

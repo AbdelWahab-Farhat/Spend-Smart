@@ -7,6 +7,6 @@ class TransactionView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  TransactionViewBody();
+    return  const TransactionViewBody();
   }
 }
