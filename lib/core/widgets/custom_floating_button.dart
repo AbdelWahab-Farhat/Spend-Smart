@@ -17,7 +17,7 @@ class CustomFloatingButton extends StatelessWidget {
       width: width ?? 150,
       height: 50,
       child: FloatingActionButton(onPressed: onPressed,
-        backgroundColor: kButtonColor,
+        backgroundColor: kOnPrimaryColor,
         foregroundColor: kButtonTextColor,
         shape: OutlineInputBorder(borderRadius: BorderRadius.circular(44),borderSide: const BorderSide(color: Colors.transparent)),
         child: Row(

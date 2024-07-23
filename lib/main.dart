@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:spend_smart/core/utility/size_config.dart';
 import 'package:spend_smart/features/Login/data/repo/login_repo_impl.dart';
 import 'package:spend_smart/features/Login/presentation/viewModel/login_cubit/login_cubit.dart';
+import 'package:spend_smart/core/theme.dart';
 import 'core/utility/app_router.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp.router(
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,
-            appBarTheme: const AppBarTheme(color: Colors.white),
+            inputDecorationTheme: CustomTheme.inputDecorationTheme,
             fontFamily: GoogleFonts
                 .inter()
                 .fontFamily

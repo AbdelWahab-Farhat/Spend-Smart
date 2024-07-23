@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:spend_smart/core/utility/app_router.dart';
 import 'package:spend_smart/core/utility/app_strings.dart';
 import 'package:spend_smart/core/widgets/custom_date_picker.dart';
 import 'package:spend_smart/core/widgets/custom_floating_button.dart';
@@ -11,11 +13,16 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        floatingActionButton: CustomFloatingButton(onPressed: (){}, icon: Icons.add_circle, buttonText: AppStrings.HOME_BUTTON_TEXT),
+        floatingActionButton: CustomFloatingButton(
+            onPressed: () =>
+                GoRouter.of(context).push(AppRouter.TRANSACTION_VIEW_PATH),
+            icon: Icons.add_circle,
+            buttonText: AppStrings.HOME_BUTTON_TEXT),
+
         appBar: const HomeAppBar(),
-        body:  const Padding(
+        body: const Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
           child: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
@@ -26,17 +33,21 @@ class HomeViewBody extends StatelessWidget {
                   height: 10,
                 ),
                 ExpensesStateSection(),
-                SizedBox(height: 16,),
-                ListViewExpensesSection(dayName: AppStrings.HOME_TODAY_TEXT,),
-                SizedBox(height: 10,),
-                ListViewExpensesSection(dayName: AppStrings.HOME_YESTERDAY_TEXT,),
+                SizedBox(
+                  height: 16,
+                ),
+                ListViewExpensesSection(
+                  dayName: AppStrings.HOME_TODAY_TEXT,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                ListViewExpensesSection(
+                  dayName: AppStrings.HOME_YESTERDAY_TEXT,
+                ),
               ],
             ),
           ),
         ));
   }
 }
-
-
-
-

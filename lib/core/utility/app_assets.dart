@@ -29,4 +29,5 @@ abstract class AppAssets {
   static const MANGE_CATEGORY_ICON_PATH = 'lib/assets/icons/mange-category-icon.svg';
   static const CURRENCY_ICON_PATH = 'lib/assets/icons/currency-icon.svg';
   static const ASKED_QUSTIONS_ICON_PATH = 'lib/assets/icons/asked-qustions-icon.svg';
+  static const DROP_DOWN_ARROW_ICON_PATH = 'lib/assets/icons/arrow-drop-down-icon.svg';
 }

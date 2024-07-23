@@ -39,4 +39,9 @@ abstract class AppStrings {
   static const String SETTING_LOGOUT_TEXT = 'Logout';
   static const String SETTING_CURRENCY_TEXT = 'Choose currency';
 
+  // TRANSACTION VIEW STRINGS
+  static const String TRANSACTION_CHOOSE_CATEGORY_TEXT = 'CHOOSE CATEGORY';
+  static const String TRANSACTION_NEW_CATEGORY_TEXT = 'Add New Category';
+
+
 }
