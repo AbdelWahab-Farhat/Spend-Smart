@@ -49,6 +49,7 @@ dependencies:
   percent_indicator: ^4.2.3
   dropdown_button2: ^2.3.9
   dotted_border: ^2.1.0
+  syncfusion_flutter_datepicker: ^26.2.4
 
 dev_dependencies:
   flutter_test:

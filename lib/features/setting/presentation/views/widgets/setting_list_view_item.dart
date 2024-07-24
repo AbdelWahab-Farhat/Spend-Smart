@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../constants.dart';
 import '../../../../../core/utility/app_style.dart';
@@ -8,13 +9,13 @@ import '../../../../../core/utility/app_style.dart';
 class SettingListViewItem extends StatelessWidget {
   final String title;
   final String leadingIconSvgPath;
-  final void Function() onTap;
-  const SettingListViewItem({super.key, required this.title, required this.leadingIconSvgPath, required this.onTap});
+  final String  viewPath;
+  const SettingListViewItem({super.key, required this.title, required this.leadingIconSvgPath, required this.viewPath});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: ()=> GoRouter.of(context).push(viewPath),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: ListTile(

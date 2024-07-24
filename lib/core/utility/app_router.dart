@@ -4,6 +4,7 @@ import 'package:spend_smart/features/home/presentation/views/home_view.dart';
 import 'package:spend_smart/features/report/presentation/view/report_view.dart';
 import 'package:spend_smart/features/root/presentation/views/root.dart';
 import 'package:spend_smart/features/search/presentation/views/search_view.dart';
+import 'package:spend_smart/features/setting/presentation/views/mange_categories_view.dart';
 import 'package:spend_smart/features/setting/presentation/views/setting_view.dart';
 import 'package:spend_smart/features/transation/presentation/views/new_category_view.dart';
 import 'package:spend_smart/features/transation/presentation/views/transaction_view.dart';
@@ -20,6 +21,7 @@ abstract class AppRouter {
   static const TRANSACTION_VIEW_PATH = '/transaction_view';
   static const SEARCH_VIEW_PATH = '/search_view';
   static const NEW_CATEGORY_VIEW_PATH = '/new_category_view';
+  static const MANGE_CATEGORIES_VIEW_PATH = '/mange_categories_view';
 
   static final router = GoRouter(
       routes: [
@@ -49,6 +51,9 @@ abstract class AppRouter {
         ),
         GoRoute(path: NEW_CATEGORY_VIEW_PATH,
           builder: (context, state) => const NewCategoryView(),
+        ),
+        GoRoute(path: MANGE_CATEGORIES_VIEW_PATH,
+          builder: (context, state) => const MangeCategoriesView(),
         )
       ]
 
