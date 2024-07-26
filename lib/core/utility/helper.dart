@@ -11,7 +11,7 @@ void showTopSnackBar(BuildContext context , String content , )  {
     behavior: SnackBarBehavior.floating,
     elevation: 5,
     shape: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-    margin: EdgeInsets.only(left: 10,right: 10,bottom: SizeConfig.viewHeight! - 140),
+    margin: EdgeInsets.only(left: 10,right: 10,bottom: SizeConfig.viewHeight! - 170),
   );
    ScaffoldMessenger.of(context).showSnackBar(snackBar);
 }

@@ -28,7 +28,7 @@ class NewCategoryBody extends StatelessWidget {
                   const SizedBox(width: 18,),
                    Expanded(child: CustomTextFormField(
                       label: 'Category Name', isAmount: false,
-                    validator: Validator.validateNewCategoryName,
+                    validator: Validator.newCategoryNameValidator,
                     onSaved: (name) => newCategoryCubit.categoryName = name,
                   )),
                 ],

@@ -50,7 +50,6 @@ Future<void> saveUserToFiresstore(User user) async {
       'displayName': user.displayName,
       'lastSignInTime': user.metadata.lastSignInTime,
       'creationTime': user.metadata.creationTime,
-      'transactions': null
     });
   } else {
     // Update the last sign-in time
