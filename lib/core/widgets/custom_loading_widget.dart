@@ -14,6 +14,6 @@ class CustomLoadingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return spinkit;
+    return const Center(child: spinkit);
   }
 }

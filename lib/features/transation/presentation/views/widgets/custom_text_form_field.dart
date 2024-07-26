@@ -7,15 +7,16 @@ import 'package:spend_smart/core/utility/app_style.dart';
 class CustomTextFormField extends StatelessWidget {
   final String label;
   final bool isAmount;
+  final String? Function(String?)? validator;
+  final void Function(String?)? onSaved;
   const CustomTextFormField(
-      {super.key, required this.label, required this.isAmount});
+      {super.key, required this.label, required this.isAmount, this.onSaved, this.validator});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      validator: (value) {
-        return null;
-      },
+      onSaved: onSaved,
+      validator: validator,
       style: AppStyle.body2.copyWith(fontSize: 15, color: kAccentColor),
       keyboardType: isAmount
           ? const TextInputType.numberWithOptions(decimal: true)

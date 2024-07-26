@@ -7,3 +7,8 @@ abstract class Failure{
 class ServerFailure extends Failure{
   ServerFailure({required super.errMessage});
 }
+
+class LocalDatabaseFailure extends Failure {
+  LocalDatabaseFailure({required super.errMessage});
+
+}

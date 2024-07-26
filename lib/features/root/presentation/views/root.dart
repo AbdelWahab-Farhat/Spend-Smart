@@ -8,7 +8,7 @@ import 'package:spend_smart/features/report/presentation/view/report_view.dart';
 import 'package:spend_smart/features/setting/presentation/views/setting_view.dart';
 
 class Root extends StatefulWidget {
-   const Root({super.key});
+  const Root({super.key});
 
   @override
   State<Root> createState() => _RootState();
@@ -16,7 +16,6 @@ class Root extends StatefulWidget {
 
 class _RootState extends State<Root> {
   final NotchBottomBarController notchBottomBarController = NotchBottomBarController(index: 1);
-
   List<Widget> views = [
     const ReportView(),
     const HomeView(),
@@ -24,36 +23,39 @@ class _RootState extends State<Root> {
   ];
 
   int currentIndex = 1;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: AnimatedNotchBottomBar(
-          removeMargins: true,
-          showShadow: true,
-          bottomBarHeight: 20,
-          notchBottomBarController: notchBottomBarController,
-          bottomBarItems: [
-            BottomBarItem(inActiveItem:SvgPicture.asset(AppAssets.REPORT_BLACK_ICON_PATH)
-                , activeItem: SvgPicture.asset(AppAssets.REPORT_ICON_PATH),
-                itemLabel: AppStrings.ROOT_FIRST_ITEM_TEXT
-            ),
-            BottomBarItem(inActiveItem:SvgPicture.asset(AppAssets.HOME_BLACK_ICON_PATH)
-                , activeItem: SvgPicture.asset(AppAssets.HOME_ICON_PATH),
-                itemLabel: AppStrings.ROOT_SECOND_ITEM_TEXT
-            ),
-            BottomBarItem(inActiveItem:SvgPicture.asset(AppAssets.SETTING_BLACK_ICON_PATH)
-                , activeItem: SvgPicture.asset(AppAssets.SETTING_ICON_PATH),
-                            itemLabel: AppStrings.ROOT_THIRD_ITEM_TEXT
-            )
-          ],
-          onTap: (value) {
-            setState(() {
-              currentIndex = value;
-            });
-          },
-          kIconSize: 25,
-          kBottomRadius: 10),
+        removeMargins: true,
+        showShadow: true,
+        bottomBarHeight: 60, // Increased height for better usability
+        notchBottomBarController: notchBottomBarController,
+        bottomBarItems: [
+          BottomBarItem(
+            inActiveItem: SvgPicture.asset(AppAssets.REPORT_BLACK_ICON_PATH),
+            activeItem: SvgPicture.asset(AppAssets.REPORT_ICON_PATH),
+            itemLabel: AppStrings.ROOT_FIRST_ITEM_TEXT,
+          ),
+          BottomBarItem(
+            inActiveItem: SvgPicture.asset(AppAssets.HOME_BLACK_ICON_PATH),
+            activeItem: SvgPicture.asset(AppAssets.HOME_ICON_PATH),
+            itemLabel: AppStrings.ROOT_SECOND_ITEM_TEXT,
+          ),
+          BottomBarItem(
+            inActiveItem: SvgPicture.asset(AppAssets.SETTING_BLACK_ICON_PATH),
+            activeItem: SvgPicture.asset(AppAssets.SETTING_ICON_PATH),
+            itemLabel: AppStrings.ROOT_THIRD_ITEM_TEXT,
+          ),
+        ],
+        onTap: (value) {
+          setState(() {
+            currentIndex = value;
+          });
+        },
+        kIconSize: 25,
+        kBottomRadius: 10,
+      ),
       body: views[currentIndex],
     );
   }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:spend_smart/constants.dart';
-import '../../../../../core/models/transaction.dart';
+import 'package:spend_smart/features/transation/presentation/viewModel/transaction_cubits/transaction_cubit/transaction_cubit.dart';
+import '../../../../../core/enums/transaction_enum.dart';
 import '../../../../../core/utility/app_assets.dart';
 
 
@@ -14,7 +16,6 @@ class CustomDropDownMenu extends StatefulWidget {
 }
 
 class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
-  TransactionEnum? transactionEnum;
   List<DropdownMenuItem<TransactionEnum>> items = [
     DropdownMenuItem(
       value: TransactionEnum.income,
@@ -33,7 +34,7 @@ class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
         borderRadius: BorderRadius.circular(6)
       ),
       child: DropdownButtonHideUnderline(
-        child: DropdownButton2(
+        child: DropdownButton2<TransactionEnum>(
             isExpanded: true,
             hint: const Text('Select type'),
           buttonStyleData: const ButtonStyleData(
@@ -48,12 +49,11 @@ class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
               )
             ),
             onChanged: (value) {
-              transactionEnum = value;
-              setState(() {
-              });
+              context.read<TransactionCubit>().transactionType = value;
+              setState(() {});
             },
             iconStyleData: IconStyleData(icon: SvgPicture.asset(AppAssets.DROP_DOWN_ARROW_ICON_PATH,width:10,height:10,fit: BoxFit.contain,)),
-            value: transactionEnum,
+            value: context.read<TransactionCubit>().transactionType,
             items: items,
         ),
       ),

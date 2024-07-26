@@ -16,8 +16,7 @@ class HomeViewBody extends StatelessWidget {
     return Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: CustomFloatingButton(
-            onPressed: () =>
-                GoRouter.of(context).push(AppRouter.TRANSACTION_VIEW_PATH),
+            onPressed: ()=> GoRouter.of(context).push(AppRouter.TRANSACTION_VIEW_PATH),
             icon: Icons.add_circle,
             buttonText: AppStrings.HOME_BUTTON_TEXT),
 

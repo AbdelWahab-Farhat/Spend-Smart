@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-
 import '../../../data/repo/login_repo.dart';
 
 part 'login_state.dart';
@@ -12,8 +11,9 @@ class LoginCubit extends Cubit<LoginState> {
 
   Future<void>loginAuth() async {
     emit(LoginLoading());
-    var result = await loginRepo.userAuth();
+    var result = await loginRepo.signInWithGoogle();
     result.fold((failure) => emit(LoginFailure(errMessage: failure.errMessage)),
         (_) => emit(LoginSuccess()),);
   }
 }
+

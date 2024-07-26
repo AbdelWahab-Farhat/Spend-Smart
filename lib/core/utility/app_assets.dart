@@ -1,5 +1,8 @@
 
 // ALL PHOTO AND ICONS AND JSON ANIMATION WILL BE SAVED HERE
+// ignore: unused_import
+import 'package:spend_smart/core/models/category/category.dart';
+
 abstract class AppAssets {
   static const LOGO_PATH = 'lib/assets/images/Kitty-Logo.svg';
   static const GOOGLE_ICON_PATH = 'lib/assets/icons/google-Icon.svg';
@@ -39,49 +42,6 @@ abstract class AppAssets {
   static const  YOGA_ICON_PATH = 'lib/assets/icons/yoga-icon.svg';
   static const  SAVINGS_ICON_PATH = 'lib/assets/icons/savings-icon.svg';
   static const  PARTY_ICON_PATH = 'lib/assets/icons/party-icon.svg';
-
-  static List<String> getAllIcons() {
-    return [
-      LOGO_PATH,
-      GOOGLE_ICON_PATH,
-      SEARCH_ICON_PATH,
-      CASH_ICON_PATH,
-      BALANCE_ICON_PATH,
-      INCOME_ICON_PATH,
-      CAFE_ICON_PATH,
-      COMMUTE_ICON_PATH,
-      GROCERY_ICON_PATH,
-      HEALTH_ICON_PATH,
-      LAUNDRY_ICON_PATH,
-      RESTAURANT_ICON_PATH,
-      LIQUOR_ICON_PATH,
-      GIFTS_ICON_PATH,
-      ELECTRONICS_ICON_PATH,
-      HOME_BLACK_ICON_PATH,
-      HOME_ICON_PATH,
-      REPORT_ICON_PATH,
-      REPORT_BLACK_ICON_PATH,
-      SETTING_ICON_PATH,
-      SETTING_BLACK_ICON_PATH,
-      MORE_ICON_PATH,
-      PDF_ICON_PATH,
-      LANGUAGE_ICON_PATH,
-      LOGOUT_ICON_PATH,
-      MANGE_CATEGORY_ICON_PATH,
-      CURRENCY_ICON_PATH,
-      ASKED_QUSTIONS_ICON_PATH,
-      DROP_DOWN_ARROW_ICON_PATH,
-      MARKED_ICON_PATH,
-      BALL_ICON_PATH,
-      CHIRTY_ICON_PATH,
-      COFFEE_ICON_PATH,
-      HAT_ICON_PATH,
-      GAS_ICON_PATH,
-      YOGA_ICON_PATH,
-      SAVINGS_ICON_PATH,
-      PARTY_ICON_PATH,
-    ];
-  }
 }
 
 

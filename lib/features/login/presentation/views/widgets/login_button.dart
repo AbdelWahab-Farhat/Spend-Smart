@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:spend_smart/core/utility/app_router.dart';
 import 'package:spend_smart/core/utility/helper.dart';
@@ -10,22 +10,20 @@ import '../../../../../core/utility/app_strings.dart';
 import '../../../../../core/utility/app_style.dart';
 import '../../../../../core/widgets/custom_loading_widget.dart';
 
-
 class LoginButton extends StatelessWidget {
-  const LoginButton({
-    super.key,
-  });
+  const LoginButton({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<LoginCubit, LoginState>(
-      listener: (context, state) {
+      listener: (context, state) async {
         if (state is LoginSuccess) {
-          showTopSnackBar(context, 'Login Successful');
-          GoRouter.of(context).pushReplacement(AppRouter.HOME_VIEW_PATH);
-        }
-        else if (state is LoginFailure) {
-          showTopSnackBar(context, state.errMessage);
+          GoRouter.of(context).pushReplacement(AppRouter.ROOT_PATH);
+
+        } else if (state is LoginFailure) {
+          if (state.errMessage != 'user-cancel-sign-up') {
+            showTopSnackBar(context, state.errMessage);
+          }
         }
       },
       builder: (context, state) {
@@ -41,25 +39,28 @@ class LoginButton extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 52, vertical: 52),
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(4),
-                border: Border.all(color: Colors.grey)
+              borderRadius: BorderRadius.circular(4),
+              border: Border.all(color: Colors.grey),
             ),
-            child: buttonContent(),
+            child: _buttonContent(),
           ),
         );
       },
     );
   }
 
-  Row buttonContent() {
+  Row _buttonContent() {
     return Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SvgPicture.asset(AppAssets.GOOGLE_ICON_PATH),
-              const SizedBox(width: 20,),
-              Center(child: Text(AppStrings.LOGIN_BUTTON_TEXT,
-                style: AppStyle.headLine6.copyWith(fontSize: 16),))
-            ],
-          );
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SvgPicture.asset(AppAssets.GOOGLE_ICON_PATH),
+        const SizedBox(width: 20),
+        Text(
+          AppStrings.LOGIN_BUTTON_TEXT,
+          style: AppStyle.headLine6.copyWith(fontSize: 16),
+        ),
+      ],
+    );
   }
 }
+
