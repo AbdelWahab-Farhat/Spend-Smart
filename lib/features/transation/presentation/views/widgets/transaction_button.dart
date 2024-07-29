@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:spend_smart/core/utility/app_router.dart';
 import 'package:spend_smart/core/utility/helper.dart';
 import 'package:spend_smart/core/widgets/custom_loading_widget.dart';
+import 'package:spend_smart/features/home/presentation/viewModel/home_cubit.dart';
+import 'package:spend_smart/features/root/presentation/views/root.dart';
 import 'package:spend_smart/features/transation/presentation/viewModel/transaction_cubits/transaction_cubit/transaction_cubit.dart';
 
 import '../../../../../core/utility/size_config.dart';
@@ -20,6 +23,7 @@ class TransactionButton extends StatelessWidget {
         if (state is TransactionSuccess) {
           showTopSnackBar(context, state.successMessage);
           GoRouter.of(context).pop();
+          context.read<HomeCubit>().getUserTransaction();
         }
         else if (state is TransactionFailure) {
           showTopSnackBar(context, state.errMessage);

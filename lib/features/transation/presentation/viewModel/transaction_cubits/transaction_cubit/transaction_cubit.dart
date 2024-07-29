@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:spend_smart/core/enums/transaction_enum.dart';
-import 'package:spend_smart/core/models/transaction.dart';
+import 'package:spend_smart/core/models/transaction/transaction.dart';
 import 'package:uuid/uuid.dart';
 import '../../../../../../core/models/category/category.dart';
 import '../../../../data/repo/transaction_repo/transaction_repo.dart';

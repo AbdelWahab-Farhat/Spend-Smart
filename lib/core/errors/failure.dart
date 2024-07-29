@@ -10,5 +10,9 @@ class ServerFailure extends Failure{
 
 class LocalDatabaseFailure extends Failure {
   LocalDatabaseFailure({required super.errMessage});
+}
+
+class PDFFailure extends Failure {
+  PDFFailure({required super.errMessage});
 
 }

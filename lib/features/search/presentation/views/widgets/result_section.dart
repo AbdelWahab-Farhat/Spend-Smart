@@ -23,16 +23,16 @@ class ResultSection extends StatelessWidget {
         children: [
           dayAndFullExpenseRow(),
           const SizedBox(height: 8,),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: 5,
-            itemBuilder: (context, index) =>  const Padding(
-              padding: EdgeInsets.only(top: 10 , bottom: 10),
-              child: CustomExpenseItemWidget(),
-            ),
-
-          )
+          // ListView.builder(
+          //   shrinkWrap: true,
+          //   physics: const NeverScrollableScrollPhysics(),
+          //   itemCount: 5,
+          //   itemBuilder: (context, index) =>  const Padding(
+          //     padding: EdgeInsets.only(top: 10 , bottom: 10),
+          //      child: CustomExpenseItemWidget(transaction: null,),
+          //   ),
+          // )
+          
         ],),
     );
   }

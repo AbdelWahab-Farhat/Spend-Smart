@@ -43,7 +43,7 @@ class _TransactionViewBodyState extends State<TransactionViewBody> {
                 const SizedBox(height: 20,),
                 const FormFields(),
                 SizedBox(height: SizeConfig.viewHeight!* .40,),
-                TransactionButton(),
+                const TransactionButton(),
               ],
             ),
           ),

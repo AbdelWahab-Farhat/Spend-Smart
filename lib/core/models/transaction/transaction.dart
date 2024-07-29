@@ -1,5 +1,5 @@
 import 'package:spend_smart/core/models/category/category.dart';
-import '../enums/transaction_enum.dart';
+import '../../enums/transaction_enum.dart';
 
 class Transaction {
   final String ID;

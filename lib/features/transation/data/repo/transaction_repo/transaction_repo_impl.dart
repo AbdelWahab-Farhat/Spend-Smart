@@ -5,7 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:spend_smart/core/errors/failure.dart';
 import 'package:spend_smart/features/transation/data/repo/transaction_repo/transaction_repo.dart';
 
-import '../../../../../core/models/transaction.dart';
+import '../../../../../core/models/transaction/transaction.dart';
 
 class TransactionRepoImpl extends TransactionRepo{
   @override

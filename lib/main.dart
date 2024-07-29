@@ -7,8 +7,11 @@ import 'package:spend_smart/core/utility/size_config.dart';
 import 'package:spend_smart/features/Login/data/repo/login_repo_impl.dart';
 import 'package:spend_smart/features/Login/presentation/viewModel/login_cubit/login_cubit.dart';
 import 'package:spend_smart/core/theme.dart';
+import 'core/repo/core_repo_impl.dart';
 import 'core/utility/app_router.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'features/home/presentation/viewModel/home_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,11 +30,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().initSizeConfig(context);
 
-    return BlocProvider(
-      create: (context) => LoginCubit(LoginRepoImpl()),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => LoginCubit(LoginRepoImpl()),
+        ),
+        BlocProvider(
+          create: (context) => HomeCubit(CoreRepoImpl()),
+        ),
+      ],
       child: MaterialApp.router(
         theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
+            scaffoldBackgroundColor: Colors.white,
             inputDecorationTheme: CustomTheme.inputDecorationTheme,
             fontFamily: GoogleFonts
                 .inter()

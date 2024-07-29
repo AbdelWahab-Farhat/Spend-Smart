@@ -118,4 +118,26 @@ class CategoryUtils {
           (e) => num.parse(e),
     ).toList();
   }
+
+  static String rgboToHex(String rgboStr) {
+    // Split the RGBO string into a list of its components
+    List<String> components = rgboStr.split(',');
+
+    // Parse the RGB values and the alpha component
+    int r = int.parse(components[0]);
+    int g = int.parse(components[1]);
+    int b = int.parse(components[2]);
+    double o = double.parse(components[3]);
+
+    // Convert the RGB values to a hex string
+    String hex = '#${(r << 16 | g << 8 | b).toRadixString(16).padLeft(6, '0')}';
+
+    // Include the alpha value if it's not fully opaque
+    if (o != 1.0) {
+      int alpha = (o * 255).toInt();
+      hex += alpha.toRadixString(16).padLeft(2, '0');
+    }
+
+    return hex;
+  }
 }
