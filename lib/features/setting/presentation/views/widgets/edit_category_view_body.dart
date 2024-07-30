@@ -5,8 +5,6 @@ import 'package:spend_smart/core/utility/size_config.dart';
 import 'package:spend_smart/core/widgets/custom_app_bar.dart';
 import 'package:spend_smart/features/setting/presentation/views/widgets/edit_category_button.dart';
 import 'package:spend_smart/features/transation/presentation/views/widgets/custom_text_form_field.dart';
-import 'package:spend_smart/features/transation/presentation/views/widgets/new_category_button.dart';
-import 'package:spend_smart/features/transation/presentation/views/widgets/new_category_icon_picker.dart';
 
 import '../../../../../core/models/category/category.dart';
 import '../../viewModel/manage_categories_cubit/manage_categories_cubit.dart';

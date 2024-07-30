@@ -17,7 +17,9 @@ class ListViewExpenses extends StatelessWidget {
   final String dayName;
 
   const ListViewExpenses({
-    super.key, required this.dayName, required this.type,
+    super.key,
+    required this.dayName,
+    required this.type,
   });
 
   @override
@@ -31,10 +33,12 @@ class ListViewExpenses extends StatelessWidget {
           var today = TransactionUtils.getTodayExpenses(transactions);
           var yesterday = TransactionUtils.getYesterdayExpenses(transactions);
 
-          List<Transaction> selectedTransactions = type == 1 ? today : yesterday;
           if (today.isEmpty && yesterday.isEmpty) {
             return const CustomWarningWidget(text: 'No expenses');
           }
+
+          List<Transaction> selectedTransactions = type == 1 ? today : yesterday;
+
           if (selectedTransactions.isEmpty) {
             return const SizedBox();
           } else {
@@ -47,7 +51,7 @@ class ListViewExpenses extends StatelessWidget {
               child: Column(
                 children: [
                   dayAndFullExpenseRow(selectedTransactions),
-                  const SizedBox(height: 8,),
+                  const SizedBox(height: 8),
                   ListView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
@@ -72,13 +76,17 @@ class ListViewExpenses extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(dayName, style: AppStyle.body2,),
-        Text('- ${AppStrings.currency} ${TransactionUtils.countDayExpenseAmount(transactions).toStringAsFixed(0)}',
-        maxLines: 1,
+        Text(
+          dayName,
+          style: AppStyle.body2,
+        ),
+        Text(
+          '- ${AppStrings.currency} ${TransactionUtils.countDayExpenseAmount(transactions).toStringAsFixed(0)}',
+          maxLines: 1,
           overflow: TextOverflow.fade,
           softWrap: true,
-        )
-    ],
+        ),
+      ],
     );
   }
 }

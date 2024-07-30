@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:spend_smart/features/report/presentation/viewModel/report_cubit/report_cubit.dart';
 
 class OverViewBar extends StatelessWidget {
   final List<double> expenses;

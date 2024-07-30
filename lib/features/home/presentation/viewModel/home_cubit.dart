@@ -8,6 +8,7 @@ part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   final CoreRepo coreRepo;
+  int counter = 0;
   HomeCubit(this.coreRepo) : super(HomeInitial());
 
   Future<void> getUserTransaction () async {

@@ -61,8 +61,8 @@ abstract class TransactionUtils {
 
   static countBalanceAmount(List<Transaction> transactions) {
     double balance =  countFullIncomeAmount(transactions) - countFullExpensesAmount(transactions);
-    if (balance < 0) {
-      return 0;
+    if (balance < 0.0) {
+      return 0.0;
     }
     else {
       return balance;
