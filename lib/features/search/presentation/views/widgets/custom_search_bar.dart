@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:spend_smart/features/search/presentation/viewModel/search_cubit/search_cubit.dart';
 
 import '../../../../../constants.dart';
 import '../../../../../core/utility/app_strings.dart';
@@ -10,8 +12,13 @@ class CustomSearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var getSearchCubit = context.read<SearchCubit>();
     return  SafeArea(
       child: TextField(
+        onChanged: (value) {
+          getSearchCubit.updateState();
+        },
+        controller: getSearchCubit.controllerSearch,
         decoration: InputDecoration(
           prefixIcon: GestureDetector(
               onTap: () => GoRouter.of(context).pop(),

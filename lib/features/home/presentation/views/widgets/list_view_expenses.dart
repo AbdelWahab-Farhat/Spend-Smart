@@ -73,7 +73,7 @@ class ListViewExpenses extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(dayName, style: AppStyle.body2,),
-        Text('- ${AppStrings.currency} ${TransactionUtils.countDailyExpenseAmount(transactions).toStringAsFixed(0)}',
+        Text('- ${AppStrings.currency} ${TransactionUtils.countDayExpenseAmount(transactions).toStringAsFixed(0)}',
         maxLines: 1,
           overflow: TextOverflow.fade,
           softWrap: true,

@@ -1,15 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spend_smart/constants.dart';
-import 'package:spend_smart/features/search/presentation/views/widgets/filter_box.dart';
+import 'package:spend_smart/features/search/presentation/viewModel/category_filter_cubit/category_filter_cubit.dart';
+import 'package:spend_smart/features/search/presentation/viewModel/search_cubit/search_cubit.dart';
 import 'package:spend_smart/features/search/presentation/views/widgets/result_section.dart';
 
 import 'custom_search_bar.dart';
+import 'list_view_filter.dart';
 
-class SearchViewBody extends StatelessWidget {
+class SearchViewBody extends StatefulWidget {
 
   const SearchViewBody({super.key});
 
+  @override
+  State<SearchViewBody> createState() => _SearchViewBodyState();
+}
+
+class _SearchViewBodyState extends State<SearchViewBody> {
+  @override
+  void initState() {
+    context.read<CategoryFilterCubit>().initCategories();
+    context.read<SearchCubit>().initUserTransactions();
+
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle( SystemUiOverlayStyle(
@@ -18,37 +33,22 @@ class SearchViewBody extends StatelessWidget {
     return const Scaffold(
       body: Padding(
         padding: EdgeInsets.only(top: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-          CustomSearchBar(),
-          SizedBox(height: 20,),
-            ListViewFilters(),
-            Divider(color: kBorderColor,),
-            ResultSection(dayName: 'Today')
-        ],),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+            CustomSearchBar(),
+            SizedBox(height: 20,),
+              ListViewFilters(),
+              Divider(color: kBorderColor,),
+              ResultSection(),
+          ],),
+        ),
       ),
     );
   }
 }
 
-class ListViewFilters extends StatelessWidget {
-  const ListViewFilters({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 40,
-      child: ListView.builder(
-        padding: const EdgeInsets.only(right: 10),
-        scrollDirection: Axis.horizontal,
-        itemCount: 5,
-        itemBuilder: (context, index) {
-        return const FilterBox();
-      },),
-    );
-  }
-}
 
 
 

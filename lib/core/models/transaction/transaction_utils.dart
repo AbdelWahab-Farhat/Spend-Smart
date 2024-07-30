@@ -2,7 +2,6 @@
 import 'package:spend_smart/core/enums/transaction_enum.dart';
 import 'package:spend_smart/core/models/transaction/transaction.dart';
 
-import '../category/category.dart';
 
 abstract class TransactionUtils {
 
@@ -31,7 +30,7 @@ abstract class TransactionUtils {
     }).toList();
   }
 
-  static double countDailyExpenseAmount(List<Transaction> transactions) {
+  static double countDayExpenseAmount(List<Transaction> transactions) {
     return transactions.fold(0.0, (sum, e) {
       if (e.transactionType == TransactionEnum.expense) {
         return sum + e.amount;
@@ -93,5 +92,19 @@ abstract class TransactionUtils {
     }
     return (counter / expensesByCategory.values.length) * 100;
   }
+
+  static Map<DateTime, List<Transaction>> expensesByDate(List<Transaction> transactions) {
+    Map<DateTime, List<Transaction>> dateMap = {};
+    for (var transaction in transactions) {
+      DateTime dateKey = DateTime(transaction.transactionDate.year, transaction.transactionDate.month, transaction.transactionDate.day);
+      if (dateMap.containsKey(dateKey)) {
+        dateMap[dateKey]!.add(transaction);
+      } else {
+        dateMap[dateKey] = [transaction];
+      }
+    }
+    return dateMap;
+  }
+
 }
 

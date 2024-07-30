@@ -46,11 +46,11 @@ class ListTileDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Text(
-            '- ${AppStrings.currency} $transactionsPrice',
+            '- ${AppStrings.currency} ${transactionsPrice.toStringAsFixed(0)}',
             style: AppStyle.body2.copyWith(color: kCashRedColor, fontSize: 15),
           ),
           Text(
-            '${percent.toStringAsFixed(1)}%',
+            '${percent.toStringAsFixed(2)}%',
             style: AppStyle.body2.copyWith(fontWeight: FontWeight.w500),
           )
         ],
