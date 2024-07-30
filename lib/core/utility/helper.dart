@@ -16,3 +16,11 @@ void showTopSnackBar(BuildContext context , String content , )  {
    ScaffoldMessenger.of(context).showSnackBar(snackBar);
 }
 
+void showSnackBar(BuildContext context , String content) {
+  SnackBar snackBar = SnackBar(content: Text(content,
+    style: AppStyle.body2.copyWith(fontSize: 15,color: Colors.white),
+  ),
+  duration: const Duration(milliseconds: 500),
+  );
+  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+}

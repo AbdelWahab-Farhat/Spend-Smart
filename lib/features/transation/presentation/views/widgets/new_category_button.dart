@@ -41,6 +41,8 @@ class NewCategoryButton extends StatelessWidget {
                       svgIconImg: iconPickerCubit.newCategoryValue!.svgIconImg,
                       categoryRGBOColor: iconPickerCubit.newCategoryValue!.categoryRGBOColor
                   );
+
+                  // TODO: CHECK IF THEY ARE THE SAME NAME HERE SO YOU DON'T MAKE  MULTI CATEGORIES WITH SAME NAME
                   await newCategoryCubit.addNewCategory(category);
                 }
             }

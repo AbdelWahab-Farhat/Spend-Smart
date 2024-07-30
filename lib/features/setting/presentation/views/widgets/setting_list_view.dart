@@ -23,9 +23,8 @@ List<Widget> settingList = [
   const SettingListViewItem(title: AppStrings.SETTING_CATEGORY_TEXT, leadingIconSvgPath: AppAssets.MANGE_CATEGORY_ICON_PATH, viewPath:
      AppRouter.MANGE_CATEGORIES_VIEW_PATH
   ),
-  SettingListViewItem(title: AppStrings.SETTING_PDF_TEXT, leadingIconSvgPath: AppAssets.PDF_ICON_PATH, viewPath: ''),
-  SettingListViewItem(title: AppStrings.SETTING_CURRENCY_TEXT, leadingIconSvgPath: AppAssets.CURRENCY_ICON_PATH, viewPath: ''),
-  SettingListViewItem(title: AppStrings.SETTING_LANGUAGE_TEXT, leadingIconSvgPath: AppAssets.LANGUAGE_ICON_PATH, viewPath: ''),
-  SettingListViewItem(title: AppStrings.SETTING_QUESTIONS_TEXT, leadingIconSvgPath: AppAssets.ASKED_QUSTIONS_ICON_PATH, viewPath: ''),
-  SettingListViewItem(title: AppStrings.SETTING_LOGOUT_TEXT, leadingIconSvgPath: AppAssets.LOGOUT_ICON_PATH, viewPath: ''),
+  const SettingListViewItem(title: AppStrings.SETTING_CURRENCY_TEXT, leadingIconSvgPath: AppAssets.CURRENCY_ICON_PATH, viewPath: ''),
+  const SettingListViewItem(title: AppStrings.SETTING_LANGUAGE_TEXT, leadingIconSvgPath: AppAssets.LANGUAGE_ICON_PATH, viewPath: ''),
+  const SettingListViewItem(title: AppStrings.SETTING_QUESTIONS_TEXT, leadingIconSvgPath: AppAssets.ASKED_QUSTIONS_ICON_PATH, viewPath: ''),
+  const SettingListViewItem(title: AppStrings.SETTING_LOGOUT_TEXT, leadingIconSvgPath: AppAssets.LOGOUT_ICON_PATH, viewPath: '',isLogout: true,),
 ];
